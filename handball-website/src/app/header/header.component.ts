@@ -12,4 +12,14 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  active(event: any){
+    const elements = Array.from(document.querySelectorAll('.item'));
+    elements.forEach(element => {
+      element.classList.remove('active');
+    });
+    event.target.classList.add('active');
+   
+    
+  }
+
 }

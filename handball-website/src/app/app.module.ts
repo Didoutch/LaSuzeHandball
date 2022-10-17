@@ -10,6 +10,8 @@ import { EquipeComponent } from './equipe/equipe.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { CarousselComponent } from './caroussel/caroussel.component';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { BackgroundComponent } from './background/background.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { NgImageSliderModule } from 'ng-image-slider';
     BlocInfosComponent,
     EquipeComponent,
     AccueilComponent,
-    CarousselComponent
+    CarousselComponent,
+    BackgroundComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

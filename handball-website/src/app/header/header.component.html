@@ -1,10 +1,10 @@
 <img class="logo" src="../../assets/img/logo.png">
-<div class="header-first-bloc">ES LA SUZE HANDBALL</div>
+<div class="header-first-bloc">
+  <div class="contact item" [routerLink]="['/contact']" (click)="active($event)">Contact</div>
+</div>
 <div id="navbar">
-  <a href="javascript:void(0)">Nous contacter</a>
-  <a href="javascript:void(0)">Boutique</a>
-  <a href="javascript:void(0)">Les sponsors</a>
-  <a href="javascript:void(0)">Souvenirs</a>
-  <a routerLink="equipes">Les équipes</a>
-  <a class="active" href="javascript:void(0)">Le club</a>
+  <div class="active item" (click)="active($event)">Le club<span class="separator"></span></div>
+  <div class="item" (click)="active($event)">Les équipes<span class="separator"></span></div>
+  <div class="item" (click)="active($event)">Souvenirs<span class="separator"></span></div>
+  <div class="item" (click)="active($event)">Les sponsors</div>
 </div>

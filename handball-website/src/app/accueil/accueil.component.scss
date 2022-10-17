@@ -1,5 +1,110 @@
-:host{
-    .infos{
-        margin: 200px;
+:host {
+
+    .title {
+        font-size: 50px;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
     }
+
+    .photo-gauche, .photo-droite{
+        height: 700px;
+        position: absolute;
+    }
+
+    .photo-droite{
+        right: 100px;
+    }
+
+    
+    .photo-gauche{
+        left: 100px;
+    }
+
+    .match-week-end {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .scorenco {
+            padding: 50px 100px;
+            width: 100%;
+        }
+    }
+
+    .rejoindre-club-wrapper {
+
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 100px;
+
+        .rejoindre-club {
+            width: 800px;
+            display: flex;
+            align-self: center;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            margin: 25px 0;
+
+            .subtitle-rejoindre{
+                color: #1470f8;
+                font-size: 25px;
+                font-weight: bold;
+            }
+            .button {
+                margin-top: 25px;
+                display: flex;
+                align-self: center;
+                justify-content: center;
+                border-radius: 50px;
+                background-color: #1470f8;
+                color: #fff;
+                font-size: 18px;
+                padding: 7px;
+                width: 250px;
+
+                &:hover {
+                    background-color: #0446a8;
+                    color: #fff;
+                }
+            }
+
+            .adresse {
+                font-weight: bold;
+                margin-top: 5px;
+            }
+
+            .reseaux {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 50px;
+
+            .logo-follow {
+                &:hover{
+                    transform: scale(1.2);
+                }
+
+                &.facebook {
+                    width: 100px;      
+                  }
+                  &.insta {
+                      width: 120px;      
+                    }
+                    &.tiktok {
+                      width: 120px;      
+                    }
+                    &.twitter {
+                      width: 160px;      
+                    }
+            }
+            }
+        }
+    }
+
 }

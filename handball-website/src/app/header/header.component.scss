@@ -1,18 +1,45 @@
 :host{
-
+  position: relative;
+  z-index: 100;
       .logo{
           width: 140px;
           position: absolute;
-          z-index: 1;
+          z-index: 10;
       }
 
       .header-first-bloc{
+        display: flex;
+        justify-content: right;
+        align-items: center;
         height: 50px;
-        text-align: center;
-        font-size: 35px;
-        color: white;
-        font-weight: bold;
         background-color: rgb(20, 112, 248);
+
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #ffff;
+          font-size: 14px;
+          padding: 20px;
+          position: relative;
+
+          &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+          }
+
+          .separator {
+            position: absolute;
+            right: 0px;
+            height: 20px;
+            width: 0px;
+            border-right: 1px solid rgb(201, 199, 199);
+          }
+
+          &.contact{
+            padding-right: 50px;
+          }
+        }
       }
 
       
@@ -22,22 +49,41 @@
         position: sticky;
         height: 85px;
         top: 0;
+        display: flex;
+        justify-content: right;
+        align-items: center;
        
       }
 
       
-      #navbar a {
-        float: right;
+      #navbar div {
         color: #f2f2f2;
-        text-align: center;
-        height: 85px;
-        line-height: 85px;
-        padding-right: 5%;
-        text-decoration: none;
-        vertical-align: middle;
+        padding: 50px;
         font-size: 17px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        position: relative;
+        
+        .separator {
+          position: absolute;
+          right: 0px;
+          height: 30px;
+          width: 0px;
+          border-right: 1px solid rgb(201, 199, 199);
+        }
+
+        &:hover{
+          color: rgb(96, 160, 255);
+          cursor: pointer;
+        }
+
+        &.active{
+          color: rgb(96, 160, 255);
+        }
       }
-    
       
 
 }
