@@ -12,6 +12,18 @@ import { CarousselComponent } from './caroussel/caroussel.component';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { BackgroundComponent } from './background/background.component';
 import { ContactComponent } from './contact/contact.component';
+import { LightgalleryModule } from 'lightgallery/angular/13';
+import { SouvenirsComponent } from './souvenirs/souvenirs.component';
+import { SponsorsComponent } from './sponsors/sponsors.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { AutoOpenMenuComponent } from './auto-open-menu/auto-open-menu.component';
+
 
 @NgModule({
   declarations: [
@@ -23,12 +35,23 @@ import { ContactComponent } from './contact/contact.component';
     AccueilComponent,
     CarousselComponent,
     BackgroundComponent,
-    ContactComponent
+    ContactComponent,
+    SouvenirsComponent,
+    SponsorsComponent,
+    AutoOpenMenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    LightgalleryModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

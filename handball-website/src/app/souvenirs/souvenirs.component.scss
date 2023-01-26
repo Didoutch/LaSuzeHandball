@@ -1,0 +1,18 @@
+:host{
+
+    .masonry { 
+        display: flex;
+  flex-flow: row wrap;
+  margin-left: -8px;
+  width: 100%;
+      }
+
+      .photo{
+        border: 1px solid #fff;
+        height: 250px;
+        margin: 4px;
+        border-radius: 5px;
+        max-width: 400px;
+      }
+  
+}

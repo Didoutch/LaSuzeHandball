@@ -1,89 +1,191 @@
-:host{
+:host {
   position: relative;
   z-index: 100;
-      .logo{
-          width: 140px;
-          position: absolute;
-          z-index: 10;
+
+  .equipe{
+    padding: 0 !important;
+  }
+  
+  .logo {
+    width: 140px;
+    position: absolute;
+    z-index: 10;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .header-first-bloc {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(20, 112, 248);
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffff;
+      font-size: 14px;
+      padding: 20px;
+      position: relative;
+
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
       }
 
-      .header-first-bloc{
+      .separator {
+        position: absolute;
+        right: 0px;
+        height: 20px;
+        width: 0px;
+        border-right: 1px solid rgb(201, 199, 199);
+      }
+
+      &.contact {
+        padding-right: 50px;
+      }
+    }
+  }
+
+
+  #navbar {
+    background-color: #333;
+    position: sticky;
+    height: 85px;
+    top: 0;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+  }
+
+
+  .item {
+    color: #f2f2f2;
+    font-size: 17px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+
+
+    .separator {
+      position: absolute;
+      right: 0px;
+      height: 30px;
+      width: 0px;
+      border-right: 1px solid rgb(201, 199, 199);
+    }
+
+    &:hover {
+      color: rgb(96, 160, 255);
+      cursor: pointer;
+    }
+
+    &.active {
+      color: rgb(96, 160, 255);
+    }
+  }
+
+  .dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px;
+    background-color: #333;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    color: rgb(96, 160, 255);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 180px;
+    z-index: 1;
+    overflow: auto;
+    max-height: 300px;
+    border-radius: 5%;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: #ffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    color: rgb(96, 160, 255);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+
+  :host-context(.desktop){
+    .nav-desktop{
+      display: block;
+    }
+
+    .item{
+      padding: 50px;
+    }
+
+    .nav-mobile{
+      display: none;
+    }
+  }
+
+  :host-context(.mobile){
+    .nav-desktop{
+      display: none;
+    }
+
+    .separator{
+      display: none;
+    }
+    .item{
+      padding: 10px;
+      height: 40px;
+    }
+
+    .nav-mobile{
+     
+      .bg-dark{
+        background-color: #333 !important;
+      }
+
+      .navbar{
         display: flex;
-        justify-content: right;
-        align-items: center;
-        height: 50px;
-        background-color: rgb(20, 112, 248);
-
-        div {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: #ffff;
-          font-size: 14px;
-          padding: 20px;
-          position: relative;
-
-          &:hover{
-            text-decoration: underline;
-            cursor: pointer;
-          }
-
-          .separator {
-            position: absolute;
-            right: 0px;
-            height: 20px;
-            width: 0px;
-            border-right: 1px solid rgb(201, 199, 199);
-          }
-
-          &.contact{
-            padding-right: 50px;
-          }
+ 
+        .container-fluid{
+          width: fit-content !important;
+          flex: 1;
         }
-      }
-
-      
-      #navbar {
-        overflow: hidden;
-        background-color: #333;
-        position: sticky;
-        height: 85px;
-        top: 0;
-        display: flex;
-        justify-content: right;
-        align-items: center;
        
-      }
-
-      
-      #navbar div {
-        color: #f2f2f2;
-        padding: 50px;
-        font-size: 17px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        position: relative;
-        
-        .separator {
-          position: absolute;
-          right: 0px;
-          height: 30px;
-          width: 0px;
-          border-right: 1px solid rgb(201, 199, 199);
+        .logo-mobile{
+          width: 70px;
         }
 
-        &:hover{
-          color: rgb(96, 160, 255);
-          cursor: pointer;
-        }
-
-        &.active{
-          color: rgb(96, 160, 255);
+        .right{
+          flex: 1;
         }
       }
-      
-
+     
+    }
+  }
 }

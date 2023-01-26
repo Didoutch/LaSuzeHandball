@@ -1,0 +1,152 @@
+:host{
+
+  .contact-wrapper{
+    display: flex;
+    flex: 1 1 auto;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    .profil{
+      width: 200px;
+    }
+  }
+  
+
+  .bloc-title-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+
+    .bloc-title{
+      margin: 20px;
+      padding: 10px;
+      width: 350px;
+      font-size: 20px;
+
+      .contact{
+        color: rgb(20, 112, 248);
+        font-weight: bold;
+        font-size: 35px;
+      }
+    }
+  }
+
+  .title{
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 50px;
+  }
+
+  .subtitle{
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+  }
+   
+    .wrapper {
+        display: flex;
+        flex-flow: row wrap;   
+    }
+      .photo{
+        height: 300px;
+        width: 300px;
+        border-radius: 5px;
+      
+      }
+
+      .photo-contact{
+        height: 200px;
+        width: 200px;
+        border-radius: 5px;
+      }
+  
+
+      .card {
+        position: relative;
+        height: fit-content;
+        width:fit-content;
+        margin: 2rem;
+    
+      }
+      
+      .card-side {
+        transition: all 0.8s ease;
+        backface-visibility: hidden;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .card-side.back {
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        width: 300px;
+        border-radius: 5px;
+        transform: rotateY(-180deg);
+        background-color: rgb(20, 112, 248);
+        padding: 15px;
+        .title{
+            text-align: center;
+            flex-grow: 0;
+            color: #fff;
+        }
+
+        .title-contact{
+          font-size: 30px;
+          text-align: center;
+          flex-grow: 0;
+          color: #fff;
+        }
+
+        ul{
+          color: #fff;
+          flex-grow: 1;
+          text-justify: auto;
+        }
+
+        p{
+            color: #fff;
+            flex-grow: 1;
+            text-justify: auto;
+          }
+
+          &.contact{
+            width: 200px;
+            height: 200px;
+          }
+      }
+      
+      .card-side.front {
+        position: relative;
+        height: 300px;
+        width: 300px;
+        &.contact{
+          width: 200px;
+          height: 200px;
+        }
+      }
+      
+      .card.hoverContact .card-side.front {
+        transform: rotateY(180deg);
+      }
+      
+      .card.hoverContact .card-side.back {
+        transform: rotateY(0deg);
+      }
+      
+
+      .card:hover .card-side.front {
+        transform: rotateY(180deg);
+      }
+      
+      .card:hover .card-side.back {
+        transform: rotateY(0deg);
+      }
+   
+}

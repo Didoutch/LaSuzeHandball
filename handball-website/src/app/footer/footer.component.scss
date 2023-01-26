@@ -1,68 +1,119 @@
-:host{
-    
-    .contact{
-        height: 250px;
-        background-color: #f8f8f9;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+:host {
 
-        .logo-wrapper{
-            flex: 1 1 0px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+  .contact {
+    height: 250px;
+    background-color: #f8f8f9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
-            .logo{
-                width: 240px;    
-            }
-        }
-       
-        .contact-wrapper{
-            padding-top: 50px;
-            flex: 1 1 0px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-        }
-        
-        .follow-wrapper{
-            padding-top: 50px;
-            flex: 1 1 0px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .logo-follow{
-                margin: 0 10px;
-
-                &.facebook {
-                  width: 25px;      
-                }
-                &.insta {
-                    width: 30px;      
-                  }
-                  &.tiktok {
-                    width: 25px;      
-                  }
-                  &.twitter {
-                    width: 35px;      
-                  }
-            }
-        }
-
-     
-
-        .horizontal-line{
-            width: 25px;
-            margin: 20px;
-            background-color: black;
-            border-bottom: 1px solid black;
-        }
+    .logo-wrapper {
+      flex: 1 1 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-    .footer-last-bloc{
-        height: 50px;
-        background-color: rgb(20, 112, 248);
+
+    .contact-wrapper {
+      padding-top: 50px;
+      flex: 1 1 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+    .follow-wrapper {
+      padding-top: 50px;
+      flex: 1 1 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+
+
+    .horizontal-line {
+      width: 25px;
+      margin: 20px;
+      background-color: black;
+      border-bottom: 1px solid black;
+    }
+  }
+
+  .footer-last-bloc {
+    height: 50px;
+    background-color: rgb(20, 112, 248);
+  }
+
+  :host-context(.desktop) {
+    .logo {
+      width: 240px;
+    }
+
+    .wrapper-logo-follow {
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      .logo-follow {
+
+        &.facebook {
+          width: 25px;
+        }
+
+        &.insta {
+          width: 30px;
+        }
+
+        &.tiktok {
+          width: 25px;
+        }
+
+        &.twitter {
+          width: 35px;
+        }
       }
+    }
+  }
+
+
+  :host-context(.mobile) {
+    .logo {
+      width: 120px;
+    }
+
+
+
+    .wrapper-logo-follow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      .logo-follow {
+        &.facebook {
+          width: 25px;
+        }
+
+        &.insta {
+          width: 30px;
+        }
+
+        &.tiktok {
+          width: 25px;
+        }
+
+        &.twitter {
+          width: 35px;
+        }
+      }
+    }
+
+
+  }
 }

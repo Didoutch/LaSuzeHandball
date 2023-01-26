@@ -1,7 +1,7 @@
 <app-background (arrowEvent)="scroll()">
 </app-background>
 <div #match class="match-week-end">
-    <div class="title">Le match du week-end</div>
+    <div class="title first-title">Le match du week-end</div>
     <div class="scorenco">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.5/iframeResizer.min.js"></script>
         <script>if (!window._rsz) { window._rsz = function () { var i = iFrameResize({ checkOrigin: false, interval: 100 }); }; if (document.readyState != "loading") { _rsz() } else { document.addEventListener("DOMContentLoaded", _rsz) } }</script>
@@ -12,31 +12,58 @@
             href="https://scorenco.com/hand/clubs/es-la-suze-handball/"></a>
     </div>
 </div>
-<img data-aos="fade-right" class="photo-gauche" src="../../assets/img/photo-gars.png">
-<img data-aos="fade-left" class="photo-droite" src="../../assets/img/photo-fille.png">
-<div class="title">Rejoindre le club</div>
-<div class="rejoindre-club-wrapper">
-    <div class="rejoindre-club">
-        <p class="subtitle-rejoindre">
-           Vous souhaitez rejoindre le club et faire parti de l'aventure ? 
-        </p>
-        <p>
-            Pour défendre les couleurs de <b>l'ES La Suze Handball</b>, il vous suffit de télécharger et de compléter le bordereau de licence ci-dessous.</p><p>Une fois complété, vous pouvez nous le renvoyer à l'adresse suivante :
-        </p>
-        <p class="adresse">Marie Crumière<br>Rue des blabla<br>
-            72210 Louplande</p>
-            <button class="button">Télécharger ma licence</button>
+<div class="content-wrapper">
+    <div class="title">Les dernières actus</div>
+    <div class="post-wrapper">
+        <iframe
+            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fhbclasuze%2Fposts%2Fpfbid09RZm27ef6aU8H7pJYBWEJgP6L6Zdj2BiJS2qZt6ZnW4wSLyNVH6c4qPMXUo47SZUl&show_text=true&width=500"
+            width="500" height="486" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <iframe
+            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fhbclasuze%2Fposts%2Fpfbid02YmmdmD6yHVktEcsjhYXdpQkd2JPkzeAbYDi7bQ2BJFw4pbNzsbvPh7MpKRfak7DXl&show_text=true&width=500"
+            width="500" height="594" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> <iframe
+            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fhbclasuze%2Fposts%2Fpfbid0AkzhRoksJuiG1kqTQ6b5T1arKJuJckiaAme8JsDX8F5CFsiQwt1GZTbn9MqDHk2Nl&show_text=true&width=500"
+            width="500" height="480" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
     </div>
-</div>
-<div class="title">Nous suivre</div>
-<div class="rejoindre-club-wrapper">
-    <div class="rejoindre-club">
-        <p>Nous sommes très actif sur les réseaux, alors rejoignez-nous !</p>
-        <div class="reseaux">
-            <a href="https://www.facebook.com/hbclasuze/" target= "_blank"><img class="logo-follow facebook" src="../../assets/img/logo-facebook.png" ></a>
-            <a href="https://www.instagram.com/eslasuzehand" target= "_blank"><img class="logo-follow insta" src="../../assets/img/logo-instagram.png"></a>
-            <a href="https://twitter.com/eslasuzehand" target= "_blank"><img class="logo-follow tiktok" src="../../assets/img/logo-tiktok.png"></a>
-            <a href="https://www.tiktok.com/@eslasuzehandball" target= "_blank"><img class="logo-follow twitter" src="../../assets/img/logo-twitter.png"></a>
+    <div class="wrapper-photos">
+        <img data-aos="fade-right" class="photo-gauche" src="../../assets/img/photo-gars.png">
+        <img data-aos="fade-left" class="photo-droite" src="../../assets/img/photo-fille.png">
+    </div>
+    <div class="title">Rejoindre le club</div>
+    <div class="rejoindre-club-wrapper">
+        <div class="rejoindre-club">
+            <p class="subtitle-rejoindre">
+                Vous souhaitez rejoindre le club et faire parti de l'aventure ?
+            </p>
+            <p>
+                Pour défendre les couleurs de <b>l'ES La Suze Handball</b>, il vous suffit de télécharger et de
+                compléter le bordereau de licence ci-dessous.</p>
+            <p>Une fois complété, vous pouvez nous le renvoyer à l'adresse suivante :
+            </p>
+            <p class="adresse">Marie Crumière<br>Rue des blabla<br>
+                72210 Louplande</p>
+            <button class="button">Télécharger ma licence</button>
+        </div>
+    </div>
+    <div class="title">Nous suivre</div>
+    <div class="rejoindre-club-wrapper">
+        <div class="rejoindre-club">
+            <p>Nous sommes très actif sur les réseaux, alors rejoignez-nous !</p>
+            <div class="reseaux">
+                <a href="https://www.facebook.com/hbclasuze/" target="_blank"><img class="logo-follow facebook"
+                        src="../../assets/img/logo-facebook.png"></a>
+                <a href="https://www.instagram.com/eslasuzehand" target="_blank"><img class="logo-follow insta"
+                        src="../../assets/img/logo-instagram.png"></a>
+                <a href="https://twitter.com/eslasuzehand" target="_blank"><img class="logo-follow tiktok"
+                        src="../../assets/img/logo-tiktok.png"></a>
+                <a href="https://www.tiktok.com/@eslasuzehandball" target="_blank"><img class="logo-follow twitter"
+                        src="../../assets/img/logo-twitter.png"></a>
+            </div>
         </div>
     </div>
 </div>

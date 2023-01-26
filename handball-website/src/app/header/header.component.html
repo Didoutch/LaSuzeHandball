@@ -1,10 +1,87 @@
-<img class="logo" src="../../assets/img/logo.png">
-<div class="header-first-bloc">
-  <div class="contact item" [routerLink]="['/contact']" (click)="active($event)">Contact</div>
+<div class="nav-desktop"><img class="logo" src="../../assets/img/logo.png" [routerLink]="['/accueil']">
+  <div class="header-first-bloc">
+    <div class="contact item" [routerLink]="['/contact']">Contact</div>
+  </div>
+  <div id="navbar">
+    <div class="item" [ngClass]="{ 'active': this.activeHeader == 0 }" [routerLink]="['/accueil']">Accueil<span
+        class="separator"></span></div>
+    <div class="item" [ngClass]="{ 'active': this.activeHeader == 1 }">Le club<span class="separator"></span></div>
+    <div class="item" [ngClass]="{ 'active': this.activeHeader == 2 }">
+      <div class="dropdown">
+        <button class="dropbtn">Les équipes
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Baby hand</a>
+          <a href="#">École de hand</a>
+          <a href="#">-10 mixte 1</a>
+          <a href="#">-10 mixte 2</a>
+          <a href="#">-12 garçons</a>
+          <a href="#">-13</a>
+          <a href="#">-14 garçon</a>
+          <a href="#">-14 garçon</a>
+          <a href="#">-15</a>
+          <a href="#">-16 garçon</a>
+          <a href="#">-19 garçon</a>
+          <a href="#">-20</a>
+          <a href="#">Sénior 1</a>
+          <a href="#">Sénior 2</a>
+          <a href="#">Loisir</a>
+        </div>
+      </div>
+
+      <span class="separator"></span>
+    </div>
+    <div class="item" [ngClass]="{ 'active': this.activeHeader == 3 }" [routerLink]="['/souvenirs']">Galerie photos<span
+        class="separator"></span></div>
+    <div class="item" [ngClass]="{ 'active': this.activeHeader == 4 }" [routerLink]="['/sponsors']">Nos partenaires
+    </div>
+  </div>
 </div>
-<div id="navbar">
-  <div class="active item" (click)="active($event)">Le club<span class="separator"></span></div>
-  <div class="item" (click)="active($event)">Les équipes<span class="separator"></span></div>
-  <div class="item" (click)="active($event)">Souvenirs<span class="separator"></span></div>
-  <div class="item" (click)="active($event)">Les sponsors</div>
+<div class="nav-mobile">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <div class="item" [ngClass]="{ 'active': this.activeHeader == 0 }" [routerLink]="['/accueil']">Accueil<span
+        class="separator"></span></div>
+    <div class="item" [ngClass]="{ 'active': this.activeHeader == 1 }">Le club</div>
+    <div class="item" [ngClass]="{ 'active': this.activeHeader == 2 }">
+      <div class="dropdown">
+        <button class="dropbtn">Les équipes
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Baby hand</a>
+          <a href="#">École de hand</a>
+          <a href="#">-10 mixte 1</a>
+          <a href="#">-10 mixte 2</a>
+          <a href="#">-12 garçons</a>
+          <a href="#">-13</a>
+          <a href="#">-14 garçon</a>
+          <a href="#">-14 garçon</a>
+          <a href="#">-15</a>
+          <a href="#">-16 garçon</a>
+          <a href="#">-19 garçon</a>
+          <a href="#">-20</a>
+          <a href="#">Sénior 1</a>
+          <a href="#">Sénior 2</a>
+          <a href="#">Loisir</a>
+        </div>
+      </div>
+    </div>
+    <div class="item" [ngClass]="{ 'active': this.activeHeader == 3 }" [routerLink]="['/souvenirs']">Galerie photos</div>
+    <div class="item" [ngClass]="{ 'active': this.activeHeader == 4 }" [routerLink]="['/sponsors']">Nos partenaires
+    </div>
+    <div class="item" [ngClass]="{ 'active': this.activeHeader == 5 }" [routerLink]="['/contact']">Contact
+    </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <img class="logo-mobile" src="../../assets/img/logo.png" [routerLink]="['/accueil']">
+    <span class="right"></span>
+  </nav>
 </div>

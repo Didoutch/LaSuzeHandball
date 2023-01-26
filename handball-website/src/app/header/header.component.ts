@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router, RoutesRecognized } from '@angular/router';
+import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  activeHeader: number = 0;
+
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+   
+    this.router.events.forEach(e => {
+      if (e instanceof NavigationEnd) {
+        console.log(this.route?.root?.firstChild?.snapshot.data?.['idHeader']);
+        this.activeHeader = this.route?.root?.firstChild?.snapshot.data?.['idHeader'];
+      }
+    });
+   
   }
 
   active(event: any){

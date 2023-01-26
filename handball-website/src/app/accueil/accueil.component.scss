@@ -2,23 +2,38 @@
 
     .title {
         font-size: 50px;
+        line-height: 50px;
         width: 100%;
         text-align: center;
         font-weight: bold;
+        margin-top: 75px;
+        margin-bottom: 25px;
+
     }
 
-    .photo-gauche, .photo-droite{
-        height: 700px;
-        position: absolute;
+    .match-week-end {
+        padding-top: 50px;
     }
 
-    .photo-droite{
-        right: 100px;
-    }
+    .wrapper-photos {
+        position: relative;
+        width: 100%;
 
-    
-    .photo-gauche{
-        left: 100px;
+
+        .photo-gauche,
+        .photo-droite {
+            height: 700px;
+            position: absolute;
+        }
+
+        .photo-droite {
+            right: 100px;
+        }
+
+
+        .photo-gauche {
+            left: 100px;
+        }
     }
 
     .match-week-end {
@@ -26,10 +41,22 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0 50px;
 
         .scorenco {
-            padding: 50px 100px;
             width: 100%;
+        }
+    }
+
+    .post-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 100%;
+
+        iframe {
+            margin: 10px;
+
         }
     }
 
@@ -39,7 +66,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-bottom: 100px;
+        max-width: 100%;
 
         .rejoindre-club {
             width: 800px;
@@ -49,12 +76,18 @@
             text-align: center;
             justify-content: center;
             margin: 25px 0;
+            max-width: 100%;
+            overflow: hidden;
 
-            .subtitle-rejoindre{
+            .subtitle-rejoindre {
                 color: #1470f8;
                 font-size: 25px;
+                line-height: 25px;
                 font-weight: bold;
             }
+
+        
+
             .button {
                 margin-top: 25px;
                 display: flex;
@@ -83,26 +116,73 @@
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
-                gap: 50px;
+            }
+
+        }
+    }
+
+    :host-context(.desktop) {
+
+        .reseaux {
+            gap: 50px;
 
             .logo-follow {
-                &:hover{
+                &:hover {
                     transform: scale(1.2);
                 }
 
                 &.facebook {
-                    width: 100px;      
-                  }
-                  &.insta {
-                      width: 120px;      
-                    }
-                    &.tiktok {
-                      width: 120px;      
-                    }
-                    &.twitter {
-                      width: 160px;      
-                    }
+                    width: 100px;
+                }
+
+                &.insta {
+                    width: 120px;
+                }
+
+                &.tiktok {
+                    width: 120px;
+                }
+
+                &.twitter {
+                    width: 160px;
+                }
             }
+
+        }
+
+    }
+
+    :host-context(.mobile) {
+        .content-wrapper{
+            padding: 0 10px;
+        }
+        .wrapper-photos {
+            display: none;
+        }
+
+        .reseaux {
+            gap: 20px;
+
+            .logo-follow {
+                &:hover {
+                    transform: scale(1.2);
+                }
+
+                &.facebook {
+                    width: 50px;
+                }
+
+                &.insta {
+                    width: 50px;
+                }
+
+                &.tiktok {
+                    width: 50px;
+                }
+
+                &.twitter {
+                    width: 50px;
+                }
             }
         }
     }
